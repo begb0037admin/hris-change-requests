@@ -1,125 +1,167 @@
-# Change Request — Colleges & Halls Org Hierarchy & Payroll Company Set-Up (UOXU)
+# Change Request — Colleges & Halls Org Hierarchy & Non-Payroll Company Set-Up (UOXU)
 
-**Date:** 2026-06-15  
-**Drafted by:** Claude Code / Kevin Lelitte  
+**Date:** 2026-06-15
+**Drafted by:** Kevin Lelitte
 **Status:** Draft
 
 ---
 
-## 1. Details – What is changing?
+## 1. Details — What is changing?
 
-Setting up a new non-payroll organisation structure in PeopleXD (UOXU) for Colleges & Halls. Components:
+A new non-payroll organisation structure will be created in PeopleXD (UOXU) for Colleges & Halls.
 
-- **Company (Code 90):** “Non-Payroll Colleges & Halls” — copied from existing Colleges & Halls company; all payroll-registered fields (tax, calendar, revenue) left blank as this company will not run payroll
-- **Pay Group (Code 90):** “ZZ Do Not Use Non-Pay” — duplicated from the existing non-employees pay group; linked to Company 90
-- **Division:** 901 — Colleges & Halls — linked to Company 90
-- **Subdivision (USER_CODE1):** ZSD901 — Colleges & Halls
-- **Level 4 (USER_CODE2):** Z90101 — Colleges & Halls
-- **Management Units:** Z901 (Colleges & Halls), Z902 (Permanent Private Halls)
-- **Pay Admin by Code values:** to be loaded via the HR Reference data migration template (pipe-delimited format); avoids manual entry
-- **Hierarchy linking:** all reference data to be linked in portal (not back office)
-- **Access grants:** HR access and Pay Group 90 access to be granted to relevant users
+The change includes:
 
-> **Note:** Division Code configuration cannot be completed until the Company Code relationship is clarified — pending a configuration session with Conor (The Access Group). See Section 3.
+- Company 90 — Non-Payroll Colleges & Halls
+- Pay Group 90 — ZZ Do Not Use Non-Pay
+- Division 901 — Colleges & Halls
+- USER_CODE1 (Subdivision) — ZSD901 — Colleges & Halls
+- USER_CODE2 (Level 4) — Z90101 — Colleges & Halls
+- Management Unit Z901 — Colleges & Halls
+- Management Unit Z902 — Permanent Private Halls
 
----
+Additional activities include loading Pay Admin by Code values using the HR Reference data migration template, linking hierarchy records within the portal, and granting HR access and Pay Group 90 access to authorised users.
 
-## 2. Justification – Why is the change necessary?
+Company 90 will be created from the existing Colleges & Halls company structure. Payroll-related fields, including tax, calendar and revenue settings, will remain blank as the company will not be used for payroll processing.
 
-Colleges & Halls staff need to be managed within PeopleXD UOXU (appointments, posts, hierarchy visibility) but are not on the University of Oxford payroll. The existing company structure does not accommodate this population. A separate non-payroll company and pay group are required to enable HR management of these staff without triggering payroll processing.
+Division Code configuration remains dependent on confirmation of the Company Code / Division Code relationship by The Access Group.
 
 ---
 
-## 3. Related Changes – Are there dependent changes?
+## 2. Justification — Why is the change necessary?
 
-- **Division Code configuration** — blocked pending Conor’s (The Access Group) configuration session on Friday to clarify Company Code / Division Code relationship. Cannot be set up until that session completes.
-- **Pay Admin by Code data migration** — separate upload step using HR Reference template; to follow company/pay group creation.
-- **Post creation and staff assignment** — subsequent steps after hierarchy is built and access granted; out of scope of this CR.
+Colleges & Halls staff require management within PeopleXD UOXU for organisational hierarchy, appointments and post management but are not paid through the University of Oxford payroll.
 
----
-
-## 4. Impact on Dependent Services – What is the impact on connected or downstream services or components?
-
-- Post profiles for Colleges & Halls staff will become visible in portal once HR access is granted to Company 90
-- **Pay Group access governs salary tab visibility:** users without explicit Pay Group 90 access will not see the salary tab for Colleges & Halls staff even if they have company-level HR access
-- Any existing HR reports or processes scoped by company will need to be reviewed to include Company 90 if Colleges & Halls staff are to appear
+The current company structure does not support this population. A dedicated non-payroll company and pay group are therefore required to enable HR administration without introducing payroll processing requirements.
 
 ---
 
-## 5. Impact – Specify downtime or at-risk period
+## 3. Related Changes — Are there dependent changes?
 
-Minimal. This creates new records (company, pay group, reference data) with no existing staff or live payroll data attached. The existing University of Oxford payroll company is not affected.
+The following activities are dependent on this change:
 
----
+- Confirmation of the Company Code / Division Code relationship by The Access Group.
+- Loading of Pay Admin by Code values through the HR Reference data migration process.
+- Creation of posts and assignment of staff following completion of the organisational hierarchy.
 
-## 6. Impact – Effect of not applying the change
-
-Colleges & Halls staff cannot be managed in PeopleXD UOXU. No posts can be created for this population. HR visibility of this staff group is not available.
-
----
-
-## 7. Risk Assessment – What are the risks to the services?
-
-- **Pay group creation error (medium):** Pay Group 90 failed to appear after creation during the 12 June demo session. Root cause unresolved — The Access Group to investigate post-call. Risk mitigated by: issue was caught immediately; no staff were assigned; deletion is safe at this stage.
-- **Data carry-over from copied company (low):** Mitigated by reviewing all sections of the copied company and removing non-applicable fields (revenue information, tax details cleared during session).
-- **Access not granted (low):** If HR access or Pay Group access is not granted, created records become invisible to users. Mitigated by completing access grants as a mandatory step before handover.
+Post creation and staff assignment are outside the scope of this change request.
 
 ---
 
-## 8. Testing – Who will test it and how?
+## 4. Impact on Dependent Services — What is the impact on connected or downstream services or components?
 
-- **Kevin Lelitte / HR Systems** to verify: Company 90 appears in organisations list; Pay Group 90 appears in managed payroll; hierarchy links correctly in portal; HR and pay group access grants work as expected; salary tab visibility is correctly controlled by pay group access
-- **The Access Group** to confirm Pay Group 90 creation issue resolved before final sign-off
+Once implemented, Colleges & Halls posts will be available within the organisational hierarchy and visible to authorised users.
+
+Access to salary information will continue to be controlled through Pay Group security. Users without Pay Group 90 access will not be able to view salary information for Colleges & Halls staff, regardless of company-level HR access.
+
+Any reporting or processes filtered by company may require review to ensure Company 90 is included where appropriate.
 
 ---
 
-## 9. Implementation Plan – Who will implement it and how?
+## 5. Impact — Specify downtime or at-risk period
+
+No service outage is expected.
+
+The change introduces new company, pay group and reference data records only. No existing staff records or live payroll data will be affected.
+
+---
+
+## 6. Impact — Effect of not applying the change
+
+Colleges & Halls staff cannot be managed within PeopleXD UOXU.
+
+Posts cannot be created for this population and HR visibility of Colleges & Halls staff will remain unavailable.
+
+---
+
+## 7. Risk Assessment — What are the risks to the services?
+
+Pay Group 90 failed to appear following creation during the 12 June demonstration session. The root cause has not yet been identified and requires investigation by The Access Group.
+
+No staff have been assigned to the pay group and the issue was identified immediately. Any incorrect configuration can be safely removed at this stage.
+
+Configuration values may inadvertently be copied from the source company during creation of Company 90.
+
+All copied configuration settings will be reviewed and non-applicable payroll-related values removed before implementation.
+
+Users may be unable to view the new organisational structure if access is not configured correctly.
+
+HR access and Pay Group access will be validated during testing prior to handover.
+
+---
+
+## 8. Potential Security Impact — What is it and how will it be tested?
+
+Access to salary information will be controlled through Pay Group 90 security.
+
+No payroll-sensitive data or credentials are being migrated.
+
+Access permissions will be restricted to authorised users only.
+
+Security testing will include:
+
+- Verifying that users without Pay Group 90 access cannot view salary information.
+- Verifying that users without Company 90 HR access cannot view Colleges & Halls posts or appointments.
+
+---
+
+## 9. Testing — Who will test it and how?
+
+Kevin Lelitte / Simon Burford (HR Systems) will verify:
+
+- Company 90 is available within the organisation structure.
+- Pay Group 90 is available within Managed Payroll.
+- Hierarchy records are linked correctly.
+- HR access permissions function as expected.
+- Pay Group access permissions function as expected.
+- Salary tab visibility is controlled correctly through Pay Group security.
+
+The Access Group will confirm resolution of the Pay Group 90 creation issue before final sign-off.
+
+Backup Restore and Service Recovery testing are not required as this change introduces configuration records only and does not affect infrastructure, backup processes or recovery arrangements.
+
+---
+
+## 10. Implementation Plan — Who will implement it and how?
 
 | Step | Owner | Status |
 |---|---|---|
-| 1. The Access Group investigates and resolves Pay Group 90 creation error | The Access Group | [TODO — post 12 Jun call] |
-| 2. The Access Group confirms Division Code / Company Code relationship | The Access Group / Kevin | [AWAITING — Friday config session] |
-| 3. Load Pay Admin by Code values via data migration tool (HR Reference template) | Kevin Lelitte | [TODO] |
-| 4. Build hierarchy linking in portal (not back office) | Kevin Lelitte | [TODO] |
-| 5. Grant HR access to Company 90 for relevant users | Kevin Lelitte | [TODO] |
-| 6. Grant Pay Group 90 access for relevant users | Kevin Lelitte | [TODO] |
-| 7. Test and verify (see Section 8) | Kevin Lelitte | [TODO] |
+| 1. Investigate and resolve the Pay Group 90 creation issue | The Access Group | TODO |
+| 2. Confirm the Company Code / Division Code relationship | The Access Group / Kevin Lelitte / Simon Burford | TODO |
+| 3. Load Pay Admin by Code values using the HR Reference template | Kevin Lelitte / Simon Burford | TODO |
+| 4. Build organisational hierarchy links within the portal | Kevin Lelitte / Simon Burford | TODO |
+| 5. Grant HR access to authorised users | Kevin Lelitte / Simon Burford | TODO |
+| 6. Grant Pay Group 90 access to authorised users | Kevin Lelitte / Simon Burford | TODO |
+| 7. Complete testing and verification | Kevin Lelitte / Simon Burford | TODO |
 
 ---
 
-## 10. Communications Plan – Who needs to know and how?
+## 11. Communications Plan — Who needs to know and how?
 
-Michelle Williams (Comms) to be notified once the change is ready to go live, to manage any user-facing communications regarding Colleges & Halls staff visibility in PeopleXD.
-
----
-
-## 11. Business Owner / Approver
-
-Marie Cooksey — Head of HR Systems
+Michelle Williams (Comms) will be notified once the change is ready for implementation to coordinate any user-facing communications relating to Colleges & Halls staff visibility within PeopleXD.
 
 ---
 
-## 12. What is the potential security impact of the change?
+## 12. Documentation — Does any documentation need to be updated?
 
-- Pay Group 90 access controls salary visibility for Colleges & Halls staff — must only be granted to authorised users
-- No payroll-sensitive data or credentials are being migrated; this is a non-payroll company
-- Access grants (HR access, pay group access) should be reviewed to ensure minimum necessary access
+Any internal administration documentation relating to organisational hierarchy management, company structures or security access may require updating following implementation.
 
----
-
-## 13. How will the security impact of the change be tested?
-
-- Verify that a user **without** Pay Group 90 access cannot see the salary tab for Colleges & Halls staff
-- Verify that a user **without** Company 90 HR access cannot see posts or appointments under that company
+The change does not affect the Service Relationship Model, Service Recovery Plan, Recovery Time Objective (RTO) or Recovery Point Objective (RPO).
 
 ---
 
-## 14. Back Out Plan – How will it be backed out in the event of the change failing?
+## 13. Service Sponsor / Approver
 
-At this stage (pre-staff-assignment), both new records can be safely deleted:
+Marie Cooksey — Head of HR Systems.
 
-1. Delete Pay Group 90 first — safe while no staff are assigned (deletion is blocked once staff are associated)
-2. Delete Company 90 from organisations list
-3. Remove reference data (Division 901, ZSD901, Z90101, management units Z901/Z902) if not used elsewhere
+---
 
-> **Important:** Once staff are assigned to Pay Group 90 or Company 90, deletion is blocked. Back-out at that stage would require reassigning or removing all staff first.
+## 14. Back Out Plan — How will it be rolled back in the event of the change failing?
+
+Provided no staff have been assigned, the change can be reversed by:
+
+1. Deleting Pay Group 90.
+2. Deleting Company 90.
+3. Removing Division 901, USER_CODE1 ZSD901, USER_CODE2 Z90101 and Management Units Z901 and Z902.
+
+Once staff have been assigned to Company 90 or Pay Group 90, those records must first be reassigned or removed before rollback can be completed.
