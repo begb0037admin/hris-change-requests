@@ -8,7 +8,7 @@
 
 ## 1. Details – What is changing?
 
-Setting up a new non-payroll organisation structure in Avanti (UOXU) for Colleges & Halls. Components:
+Setting up a new non-payroll organisation structure in PeopleXD (UOXU) for Colleges & Halls. Components:
 
 - **Company (Code 90):** “Non-Payroll Colleges & Halls” — copied from existing Colleges & Halls company; all payroll-registered fields (tax, calendar, revenue) left blank as this company will not run payroll
 - **Pay Group (Code 90):** “ZZ Do Not Use Non-Pay” — duplicated from the existing non-employees pay group; linked to Company 90
@@ -20,19 +20,19 @@ Setting up a new non-payroll organisation structure in Avanti (UOXU) for College
 - **Hierarchy linking:** all reference data to be linked in portal (not back office)
 - **Access grants:** HR access and Pay Group 90 access to be granted to relevant users
 
-> **Note:** Division Code configuration cannot be completed until the Company Code relationship is clarified — pending a configuration session with Conor (Avanti). See Section 3.
+> **Note:** Division Code configuration cannot be completed until the Company Code relationship is clarified — pending a configuration session with Conor (The Access Group). See Section 3.
 
 ---
 
 ## 2. Justification – Why is the change necessary?
 
-Colleges & Halls staff need to be managed within Avanti UOXU (appointments, posts, hierarchy visibility) but are not on the University of Oxford payroll. The existing company structure does not accommodate this population. A separate non-payroll company and pay group are required to enable HR management of these staff without triggering payroll processing.
+Colleges & Halls staff need to be managed within PeopleXD UOXU (appointments, posts, hierarchy visibility) but are not on the University of Oxford payroll. The existing company structure does not accommodate this population. A separate non-payroll company and pay group are required to enable HR management of these staff without triggering payroll processing.
 
 ---
 
 ## 3. Related Changes – Are there dependent changes?
 
-- **Division Code configuration** — blocked pending Conor’s (Avanti) configuration session on Friday to clarify Company Code / Division Code relationship. Cannot be set up until that session completes.
+- **Division Code configuration** — blocked pending Conor’s (The Access Group) configuration session on Friday to clarify Company Code / Division Code relationship. Cannot be set up until that session completes.
 - **Pay Admin by Code data migration** — separate upload step using HR Reference template; to follow company/pay group creation.
 - **Post creation and staff assignment** — subsequent steps after hierarchy is built and access granted; out of scope of this CR.
 
@@ -54,13 +54,13 @@ Minimal. This creates new records (company, pay group, reference data) with no e
 
 ## 6. Impact – Effect of not applying the change
 
-Colleges & Halls staff cannot be managed in Avanti UOXU. No posts can be created for this population. HR visibility of this staff group is not available.
+Colleges & Halls staff cannot be managed in PeopleXD UOXU. No posts can be created for this population. HR visibility of this staff group is not available.
 
 ---
 
 ## 7. Risk Assessment – What are the risks to the services?
 
-- **Pay group creation error (medium):** Pay Group 90 failed to appear after creation during the 12 June demo session. Root cause unresolved — Avanti to investigate post-call. Risk mitigated by: issue was caught immediately; no staff were assigned; deletion is safe at this stage.
+- **Pay group creation error (medium):** Pay Group 90 failed to appear after creation during the 12 June demo session. Root cause unresolved — The Access Group to investigate post-call. Risk mitigated by: issue was caught immediately; no staff were assigned; deletion is safe at this stage.
 - **Data carry-over from copied company (low):** Mitigated by reviewing all sections of the copied company and removing non-applicable fields (revenue information, tax details cleared during session).
 - **Access not granted (low):** If HR access or Pay Group access is not granted, created records become invisible to users. Mitigated by completing access grants as a mandatory step before handover.
 
@@ -69,7 +69,7 @@ Colleges & Halls staff cannot be managed in Avanti UOXU. No posts can be created
 ## 8. Testing – Who will test it and how?
 
 - **Kevin Lelitte / HR Systems** to verify: Company 90 appears in organisations list; Pay Group 90 appears in managed payroll; hierarchy links correctly in portal; HR and pay group access grants work as expected; salary tab visibility is correctly controlled by pay group access
-- **Avanti (Conor’s team)** to confirm Pay Group 90 creation issue resolved before final sign-off
+- **The Access Group** to confirm Pay Group 90 creation issue resolved before final sign-off
 
 ---
 
@@ -77,8 +77,8 @@ Colleges & Halls staff cannot be managed in Avanti UOXU. No posts can be created
 
 | Step | Owner | Status |
 |---|---|---|
-| 1. Avanti investigates and resolves Pay Group 90 creation error | Avanti | [TODO — post 12 Jun call] |
-| 2. Conor confirms Division Code / Company Code relationship | Avanti / Kevin | [AWAITING — Friday config session] |
+| 1. The Access Group investigates and resolves Pay Group 90 creation error | The Access Group | [TODO — post 12 Jun call] |
+| 2. The Access Group confirms Division Code / Company Code relationship | The Access Group / Kevin | [AWAITING — Friday config session] |
 | 3. Load Pay Admin by Code values via data migration tool (HR Reference template) | Kevin Lelitte | [TODO] |
 | 4. Build hierarchy linking in portal (not back office) | Kevin Lelitte | [TODO] |
 | 5. Grant HR access to Company 90 for relevant users | Kevin Lelitte | [TODO] |
@@ -89,7 +89,7 @@ Colleges & Halls staff cannot be managed in Avanti UOXU. No posts can be created
 
 ## 10. Communications Plan – Who needs to know and how?
 
-Michelle Williams (Comms) to be notified once the change is ready to go live, to manage any user-facing communications regarding Colleges & Halls staff visibility in Avanti.
+Michelle Williams (Comms) to be notified once the change is ready to go live, to manage any user-facing communications regarding Colleges & Halls staff visibility in PeopleXD.
 
 ---
 
