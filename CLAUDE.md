@@ -4,7 +4,7 @@
 
 ## Identity
 - **Project:** HRIS Change Requests
-- **Purpose:** Draft Change Request documents from source material (emails, meeting notes) for Kevin Lelitte to upload to Avanti. Avanti owns the approval workflow — this repo produces accurate, fully-populated `.md` CR documents.
+- **Purpose:** Draft Change Request documents from source material (emails, meeting notes) for Kevin Lelitte to upload to PeopleXD. PeopleXD owns the approval workflow — this repo produces accurate, fully-populated `.md` CR documents.
 - **Owner:** Kevin Lelitte, Manager/Director HR Systems, University of Oxford
 - **Status:** Active
 - **Repo:** https://github.com/begb0037admin/hris-change-requests
@@ -28,7 +28,7 @@ Do NOT ask Kevin for a recap. Read the CRs folder to understand current state.
 2. Claude drafts the CR using the 14-section template
 3. Kevin reviews and confirms — especially **Section 11 (Business Owner / Approver)**
 4. Claude pushes the `.md` to `CRs/`
-5. Kevin downloads and uploads to Avanti
+5. Kevin downloads and uploads to PeopleXD
 
 ## Hard Rules
 - Never invent information — flag gaps explicitly with `[TBC]` or `[CONFIRM WITH KEVIN]`
