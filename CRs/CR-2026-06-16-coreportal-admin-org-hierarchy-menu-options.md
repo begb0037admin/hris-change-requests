@@ -31,7 +31,7 @@ The menu options to be enabled are:
 | TERMS AND CONDITIONS | `POST_MANAGEMENT_MENU.TERMS_AND_CONDITIONS` | People Management (CPPM) |
 | VIEW POST APPOINTMENTS | `POST_MANAGEMENT_MENU.VIEW_POST_APPOINTMENTS` | People Management (CPPM) |
 
-The change will be applied across all environments: DEV, TEST, QA, and LIVE.
+The change will be applied across all environments in the following sequence: UOXU (UAT), UOXZ (Sandpit & Training), UOXC (Configuration), and UOXP (Production).
 
 Source: Asta Palmer, email 15 June 2026, attachment `COREPORTAL_ADMIN.xlsx`.
 
@@ -92,7 +92,7 @@ The org hierarchy migration from Back Office to Portal cannot proceed and the DT
 | Risk | Likelihood | Severity | Mitigation |
 |------|------------|----------|------------|
 | Incorrect menu options enabled, granting unintended access | Low | Low | Options confirmed by Asta Palmer via comparison against the required profile (COREPORTAL_ADMIN.xlsx, 15 Jun 2026). Changes will be verified in each environment. |
-| Menu options enabled in LIVE before testing in lower environments | Low | Medium | Implementation plan requires DEV → TEST → QA → LIVE sequence with verification at each stage. |
+| Menu options enabled in UOXP before testing in lower environments | Low | Medium | Implementation plan requires UOXU → UOXZ → UOXC → UOXP sequence with verification at each stage. |
 | Options enabled for wrong profile | Low | Low | Profile name (`COREPORTAL_ADMIN`) confirmed in source data. |
 
 Overall risk is low. This is a menu profile configuration change only — no data, payroll records, or integrations are affected.
@@ -117,14 +117,14 @@ Reference: *PeopleXD People Management — Maintain the Organisational Hierarchy
 
 | Step | Action | Owner | Status |
 |------|--------|-------|--------|
-| 1 | Enable 16 menu options on `COREPORTAL_ADMIN` in DEV | Asta Palmer | TODO |
-| 2 | Verify DEV — confirm all 16 options present and accessible | Kevin Lelitte / Asta Palmer | TODO |
-| 3 | Enable 16 menu options on `COREPORTAL_ADMIN` in TEST | Asta Palmer | TODO |
-| 4 | Verify TEST | Kevin Lelitte / Asta Palmer | TODO |
-| 5 | Enable 16 menu options on `COREPORTAL_ADMIN` in QA | Asta Palmer | TODO |
-| 6 | Verify QA | Kevin Lelitte / Asta Palmer | TODO |
-| 7 | Enable 16 menu options on `COREPORTAL_ADMIN` in LIVE | Asta Palmer | TODO |
-| 8 | Verify LIVE and sign off | Kevin Lelitte | TODO |
+| 1 | Enable 16 menu options on `COREPORTAL_ADMIN` in UOXU (UAT) | Asta Palmer | TODO |
+| 2 | Verify UOXU | Kevin Lelitte / Asta Palmer | TODO |
+| 3 | Enable 16 menu options on `COREPORTAL_ADMIN` in UOXZ (Sandpit & Training) | Asta Palmer | TODO |
+| 4 | Verify UOXZ | Kevin Lelitte / Asta Palmer | TODO |
+| 5 | Enable 16 menu options on `COREPORTAL_ADMIN` in UOXC (Configuration) | Asta Palmer | TODO |
+| 6 | Verify UOXC | Kevin Lelitte / Asta Palmer | TODO |
+| 7 | Enable 16 menu options on `COREPORTAL_ADMIN` in UOXP (Production) | Asta Palmer | TODO |
+| 8 | Verify UOXP and sign off | Kevin Lelitte | TODO |
 
 Asta Palmer has confirmed she normally receives an OSM task from the change request to complete this work. Kevin Lelitte to raise the OSM CR and assign the task to Asta once approved.
 
