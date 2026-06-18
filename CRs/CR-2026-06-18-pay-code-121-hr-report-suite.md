@@ -12,13 +12,13 @@ Pay code 121 (PAYPAY25) will be added to the SQL query pay code filter in three 
 
 The affected files are:
 
-- **PERDEP01 Full Data Set**
-- **PERDEP01 Full Data Set with Allowances**
-- **PERDEP20 Approved Allowance Changes**
+- PERDEP01 Full Data Set
+- PERDEP01 Full Data Set with Allowances
+- PERDEP20 Approved Allowance Changes
 
 Each file contains an embedded dataset (DataSet1) with a SQL query that includes an explicit list of allowance pay codes. Pay code 121 is currently absent from this list and will be added in the correct sequential position.
 
-All three files will be incremented from **Version 9.0 to Version 10.0**. Report Summary headers (Name, Tab name, Version, Last updated, Change ID) will be updated in each file.
+All three files will be incremented from Version 9.0 to Version 10.0. Report Summary headers (Name, Tab name, Version, Last updated, Change ID) will be updated in each file.
 
 The change will be applied in the HR Reporting TEST environment first, validated by Tracy, then promoted to HR Reporting LIVE.
 
@@ -38,7 +38,7 @@ None. This is a standalone SQL change to three .RDL files. No changes to data so
 
 ---
 
-## 4. Impact on Dependent Services — What is the impact on connected or downstream services or components?
+## 4. Impact on dependent services — What is the impact on connected or downstream services or components?
 
 Once deployed to LIVE, pay code 121 data will appear in PERDEP01 Full Data Set, PERDEP01 Full Data Set with Allowances, and PERDEP20 Approved Allowance Changes for any user running those reports.
 
@@ -48,7 +48,9 @@ No other reports or downstream systems are expected to be affected. Any addition
 
 ## 5. Impact — Specify downtime or at-risk period
 
-No service outage is expected. The existing Version 9.0 reports will remain live and accessible throughout. Version 10.0 files will be deployed to the LIVE environment's staging folder and will only become publicly accessible once moved to the correct folder hierarchy following successful testing.
+No service outage is expected.
+
+The existing Version 9.0 reports will remain live and accessible throughout. Version 10.0 files will be deployed to the LIVE environment's staging folder and will only become publicly accessible once moved to the correct folder hierarchy following successful testing.
 
 ---
 
@@ -68,61 +70,56 @@ A second risk is that additional report suites beyond the three identified also 
 
 ---
 
-## 8. Potential Security Impact — What is it and how will it be tested?
+## 8. What is the potential security impact of the change? How will the security impact be tested?
 
 This change adds a pay code value to existing SQL queries. It does not alter data source connections, user permissions, pay group security, or access controls.
 
 Staff on pay code 121 will become visible in reports to any user who already has access to PERDEP01 and PERDEP20. This is the intended outcome. No new access permissions are being granted.
 
-Security testing: no specific security testing is required beyond confirming that existing report access controls remain unchanged post-deployment.
+Security testing will include:
+
+- Verifying that existing report access controls remain unchanged post-deployment.
+- Verifying that no additional users have gained access to reports as a result of the change.
 
 ---
 
-## 9. Testing — Who will test it and how?
+## 9. Testing (Functional / Non-Functional) — Who will test it and how? Does Backup Restore / Service Recovery need to be re-tested?
 
 Tracy will test the change in the HR Reporting TEST environment once Version 10.0 has been deployed there.
 
-Acceptance criteria:
-- Pay code 121 (PAYPAY25) appears in the output of PERDEP01 Full Data Set
-- Pay code 121 appears in the output of PERDEP01 Full Data Set with Allowances
-- Pay code 121 appears in the output of PERDEP20 Approved Allowance Changes
-- No existing pay codes are missing from the output
-- Report formatting is unchanged
+Tracy will verify:
+
+- Pay code 121 (PAYPAY25) appears in the output of PERDEP01 Full Data Set.
+- Pay code 121 appears in the output of PERDEP01 Full Data Set with Allowances.
+- Pay code 121 appears in the output of PERDEP20 Approved Allowance Changes.
+- No existing pay codes are missing from the output.
+- Report formatting is unchanged.
 
 Promotion to LIVE will only proceed once Tracy has confirmed all criteria are met.
+
+Backup Restore and Service Recovery testing are not required as this change modifies SQL query code only and does not affect infrastructure, backup processes or recovery arrangements.
 
 ---
 
 ## 10. Implementation Plan — Who will implement it and how?
 
-Step 1  — Open HR Reporting TEST solution in Visual Studio
-          Owner: Kevin Lelitte | Status: TODO
+1. Kevin Lelitte will open the HR Reporting TEST solution in Visual Studio.
 
-Step 2  — Copy PERDEP01 Full Data Set to v10.0, add pay code 121 to DataSet1, update Report Summary header
-          Owner: Kevin Lelitte | Status: TODO
+2. Kevin Lelitte will copy PERDEP01 Full Data Set to Version 10.0, add pay code 121 to DataSet1, and update the Report Summary header.
 
-Step 3  — Copy PERDEP01 Full Data Set with Allowances to v10.0, add pay code 121 to DataSet1, update Report Summary header
-          Owner: Kevin Lelitte | Status: TODO
+3. Kevin Lelitte will copy PERDEP01 Full Data Set with Allowances to Version 10.0, add pay code 121 to DataSet1, and update the Report Summary header.
 
-Step 4  — Copy PERDEP20 Approved Allowance Changes to v10.0, add pay code 121 to DataSet1, update Report Summary header
-          Owner: Kevin Lelitte | Status: TODO
+4. Kevin Lelitte will copy PERDEP20 Approved Allowance Changes to Version 10.0, add pay code 121 to DataSet1, and update the Report Summary header.
 
-Step 5  — Enter credentials and deploy all three v10.0 files to HR Reporting TEST
-          Owner: Kevin Lelitte | Status: TODO
+5. Kevin Lelitte will enter credentials and deploy all three Version 10.0 files to HR Reporting TEST.
 
-Step 6  — Tracy validates output in TEST environment
-          Owner: Tracy | Status: TODO
+6. Tracy will validate the output in the TEST environment.
 
-Step 7  — Open HR Reporting LIVE solution, add v10.0 files from TEST, deploy to LIVE
-          Owner: Kevin Lelitte | Status: TODO
+7. Kevin Lelitte will open the HR Reporting LIVE solution, add the Version 10.0 files from TEST, and deploy to LIVE.
 
-Step 8  — Move deployed files to correct LIVE folder hierarchy; delete Version 9.0
-          Owner: Kevin Lelitte | Status: TODO
+8. Kevin Lelitte will move the deployed files to the correct LIVE folder hierarchy and delete Version 9.0.
 
-Step 9  — Confirm LIVE output is correct
-          Owner: Tracy / Kevin Lelitte | Status: TODO
-
-Estimated duration: approximately 1-2 hours including testing.
+9. Tracy and Kevin Lelitte will confirm the LIVE output is correct.
 
 ---
 
@@ -134,13 +131,15 @@ Tracy should be notified once Version 10.0 is available in TEST so she can sched
 
 ---
 
-## 12. Documentation — Does any documentation need to be updated?
+## 12. Does any documentation need to be updated? Will it affect the Service Relationship Model or Service Recovery Plan (RTO/RPO)?
 
 The Report Summary header within each affected .RDL file will be updated as part of this change. No external documentation updates are required.
 
+The change does not affect the Service Relationship Model, Service Recovery Plan, Recovery Time Objective (RTO) or Recovery Point Objective (RPO).
+
 ---
 
-## 13. Service Sponsor / Approver
+## 13. Service Sponsor / Approver — Who needs to approve this change?
 
 Marie Cooksey — Head of HR Systems.
 
@@ -151,9 +150,13 @@ Marie Cooksey — Head of HR Systems.
 The Version 9.0 .RDL files remain in the HR Reporting QA solution and in the TEST environment throughout the process. If Version 10.0 fails in LIVE:
 
 1. Open the HR Reporting LIVE solution in Visual Studio.
+
 2. Add the Version 9.0 file(s) from the TEST or QA solution using Add > Existing Item.
+
 3. Deploy the Version 9.0 file(s) to LIVE.
+
 4. Move the restored file(s) to the correct folder hierarchy in LIVE.
+
 5. Delete the Version 10.0 file(s).
 
 Rollback can be completed within approximately 15-30 minutes.
