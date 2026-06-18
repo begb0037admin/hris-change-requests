@@ -95,20 +95,37 @@ Promotion to LIVE will only proceed once Tracy has confirmed all criteria are me
 
 ## 10. Implementation Plan — Who will implement it and how?
 
-| Step | Owner | Status |
-|---|---|---|
-| 1. Raise and obtain Change ID from OSM | Hope Lelitte / Kevin Lelitte | TODO |
-| 2. Open HR Reporting TEST solution in Visual Studio | Hope Lelitte | TODO |
-| 3. Copy PERDEP01 Full Data Set to Version 10.0, add pay code 121 to DataSet1, update Report Summary header | Hope Lelitte | TODO |
-| 4. Copy PERDEP01 Full Data Set with Allowances to Version 10.0, add pay code 121 to DataSet1, update Report Summary header | Hope Lelitte | TODO |
-| 5. Copy PERDEP20 Approved Allowance Changes to Version 10.0, add pay code 121 to DataSet1, update Report Summary header | Hope Lelitte | TODO |
-| 6. Enter credentials and deploy all three Version 10.0 files to HR Reporting TEST | Hope Lelitte | TODO |
-| 7. Tracy validates output in TEST environment | Tracy | TODO |
-| 8. Open HR Reporting LIVE solution, add Version 10.0 files from TEST, deploy to LIVE | Hope Lelitte | TODO |
-| 9. Move deployed files to correct LIVE folder hierarchy; delete Version 9.0 | Hope Lelitte | TODO |
-| 10. Confirm LIVE output is correct | Tracy / Hope Lelitte | TODO |
+Step 1  — Raise and obtain Change ID from OSM
+          Owner: Hope Lelitte / Kevin Lelitte | Status: TODO
 
-Estimated duration: approximately 1–2 hours including testing.
+Step 2  — Open HR Reporting TEST solution in Visual Studio
+          Owner: Hope Lelitte | Status: TODO
+
+Step 3  — Copy PERDEP01 Full Data Set to v10.0, add pay code 121 to DataSet1, update Report Summary header
+          Owner: Hope Lelitte | Status: TODO
+
+Step 4  — Copy PERDEP01 Full Data Set with Allowances to v10.0, add pay code 121 to DataSet1, update Report Summary header
+          Owner: Hope Lelitte | Status: TODO
+
+Step 5  — Copy PERDEP20 Approved Allowance Changes to v10.0, add pay code 121 to DataSet1, update Report Summary header
+          Owner: Hope Lelitte | Status: TODO
+
+Step 6  — Enter credentials and deploy all three v10.0 files to HR Reporting TEST
+          Owner: Hope Lelitte | Status: TODO
+
+Step 7  — Tracy validates output in TEST environment
+          Owner: Tracy | Status: TODO
+
+Step 8  — Open HR Reporting LIVE solution, add v10.0 files from TEST, deploy to LIVE
+          Owner: Hope Lelitte | Status: TODO
+
+Step 9  — Move deployed files to correct LIVE folder hierarchy; delete Version 9.0
+          Owner: Hope Lelitte | Status: TODO
+
+Step 10 — Confirm LIVE output is correct
+          Owner: Tracy / Hope Lelitte | Status: TODO
+
+Estimated duration: approximately 1-2 hours including testing.
 
 ---
 
@@ -142,4 +159,4 @@ The Version 9.0 .RDL files remain in the HR Reporting QA solution and in the TES
 4. Move the restored file(s) to the correct folder hierarchy in LIVE.
 5. Delete the Version 10.0 file(s).
 
-Rollback can be completed within approximately 15–30 minutes.
+Rollback can be completed within approximately 15-30 minutes.
