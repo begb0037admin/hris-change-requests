@@ -34,29 +34,29 @@
 
 <!-- Likelihood and severity of issues. Mitigations in place. -->
 
-## 8. Testing – Who will test it and how?
+## 8. Potential Security Impact – What is it and how will it be tested?
+
+<!-- Data exposure, access changes, audit trail implications. Testing approach. -->
+
+## 9. Testing – Who will test it and how?
 
 <!-- Test plan: who, what, when, acceptance criteria. -->
 
-## 9. Implementation Plan – Who will implement it and how?
+## 10. Implementation Plan – Who will implement it and how?
 
 <!-- Step-by-step implementation. Who is responsible. Estimated duration. -->
 
-## 10. Communications Plan – Who needs to know and how?
+## 11. Communications Plan – Who needs to know and how?
 
 <!-- Stakeholders to notify. Method and timing of communication. -->
 
-## 11. Business Owner / Approver
+## 12. Documentation – Does any documentation need to be updated?
 
-<!-- Name and role of the approving business owner. ALWAYS confirm with Kevin before finalising. -->
+<!-- Internal guides, process docs, service records. -->
 
-## 12. What is the potential security impact of the change?
+## 13. Service Sponsor / Approver
 
-<!-- Data exposure, access changes, audit trail implications. -->
-
-## 13. How will the security impact of the change be tested?
-
-<!-- Security testing approach. -->
+Marie Cooksey — Head of HR Systems.
 
 ## 14. Back Out Plan – How will it be backed out in the event of the change failing?
 
