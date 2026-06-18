@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-18
 **Drafted by:** Hope Lelitte / Claude Code
-**Status:** Draft — pending Business Owner confirmation (Section 13)
+**Status:** Draft
 
 ---
 
@@ -128,7 +128,7 @@ The Report Summary header within each affected .RDL file will be updated as part
 
 ## 13. Service Sponsor / Approver
 
-[CONFIRM WITH KEVIN — likely Kevin Lelitte or Simon Burford (HR Systems). Previous CRs have used Marie Cooksey (Head of HR Systems) as Service Sponsor.]
+Marie Cooksey — Head of HR Systems.
 
 ---
 
