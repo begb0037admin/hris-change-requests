@@ -1,7 +1,7 @@
 # Change Request — Add Pay Code 121 (PAYPAY25) to HR Report Suite SQL
 
 **Date:** 2026-06-18
-**Drafted by:** Hope Lelitte
+**Drafted by:** Kevin Lelitte
 **Status:** Draft
 
 ---
@@ -96,34 +96,34 @@ Promotion to LIVE will only proceed once Tracy has confirmed all criteria are me
 ## 10. Implementation Plan — Who will implement it and how?
 
 Step 1  — Raise and obtain Change ID from OSM
-          Owner: Hope Lelitte / Kevin Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 2  — Open HR Reporting TEST solution in Visual Studio
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 3  — Copy PERDEP01 Full Data Set to v10.0, add pay code 121 to DataSet1, update Report Summary header
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 4  — Copy PERDEP01 Full Data Set with Allowances to v10.0, add pay code 121 to DataSet1, update Report Summary header
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 5  — Copy PERDEP20 Approved Allowance Changes to v10.0, add pay code 121 to DataSet1, update Report Summary header
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 6  — Enter credentials and deploy all three v10.0 files to HR Reporting TEST
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 7  — Tracy validates output in TEST environment
           Owner: Tracy | Status: TODO
 
 Step 8  — Open HR Reporting LIVE solution, add v10.0 files from TEST, deploy to LIVE
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 9  — Move deployed files to correct LIVE folder hierarchy; delete Version 9.0
-          Owner: Hope Lelitte | Status: TODO
+          Owner: Kevin Lelitte | Status: TODO
 
 Step 10 — Confirm LIVE output is correct
-          Owner: Tracy / Hope Lelitte | Status: TODO
+          Owner: Tracy / Kevin Lelitte | Status: TODO
 
 Estimated duration: approximately 1-2 hours including testing.
 
