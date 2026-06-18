@@ -40,3 +40,14 @@ Do NOT ask Kevin for a recap. Read the CRs folder to understand current state.
 ## CR Naming Convention
 `CR-2026-06-15-org-hierarchy-update.md`
 Date = date drafted. Short description = 3–5 words, kebab-case.
+
+## Branch and Merge Protocol
+Every time files are pushed to a branch, immediately ask Kevin:
+> "I've pushed to a branch — are you happy with this? Shall I merge to main now?"
+
+Recurring triggers throughout every session:
+- **On every push** — ask immediately, without waiting
+- **When Kevin signals satisfaction** — phrases like "good", "happy with that", "that's great", "okay", "done", "let's move on" — check if anything is on a branch and ask to merge
+- **When the topic shifts** — before starting a new subject, check if anything is on a branch
+
+Never leave files on a branch without Kevin's explicit sign-off.
