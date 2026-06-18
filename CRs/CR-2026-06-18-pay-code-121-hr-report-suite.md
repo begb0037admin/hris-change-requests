@@ -1,7 +1,7 @@
 # Change Request — Add Pay Code 121 (PAYPAY25) to HR Report Suite SQL
 
 **Date:** 2026-06-18
-**Drafted by:** Hope Lelitte / Claude Code
+**Drafted by:** Hope Lelitte
 **Status:** Draft
 
 ---
