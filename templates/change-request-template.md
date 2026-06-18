@@ -1,7 +1,7 @@
 # Change Request — [Title]
 
-**Date:** YYYY-MM-DD  
-**Drafted by:** Claude Code / Kevin Lelitte  
+**Date:** YYYY-MM-DD
+**Drafted by:** Kevin Lelitte
 **Status:** Draft
 
 ---
