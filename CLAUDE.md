@@ -36,6 +36,7 @@ Do NOT ask Kevin for a recap. Read the CRs folder to understand current state.
 - One `.md` file per CR, pushed to `CRs/`
 - Never commit credentials or email content verbatim if it contains personal data
 - CR filenames: `CR-YYYY-MM-DD-[short-description].md` (kebab-case, lowercase)
+- All mockups and visual designs are produced as Claude Artifacts — never committed to the repository (see CONSTITUTION.md Section 11)
 
 ## CR Naming Convention
 `CR-2026-06-15-org-hierarchy-update.md`
