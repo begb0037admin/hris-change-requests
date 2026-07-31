@@ -42,5 +42,8 @@ Do NOT ask Kevin for a recap. Read the CRs folder to understand current state.
 `CR-2026-06-15-org-hierarchy-update.md`
 Date = date drafted. Short description = 3–5 words, kebab-case.
 
+## Global Roadmap
+Cross-repo backlog: `begb0037admin/command-centre/ROADMAP.md`. When told to "update the Global Roadmap", write to that file — not any per-repo roadmap.
+
 ## Branch and Merge Protocol
 Always push directly to main. If a branch must be used, merge it to main immediately upon completion — never leave files on a branch.
