@@ -14,7 +14,7 @@ This CR retrospectively brings the report **RECSUP20_Applicant Cority Interface 
 
 **Current deployment status:** The report exists only in the **DEV/_Deployment** environment. It has never been promoted to QA or Production.
 
-**Origin and authorship:** The report was built by **Grace Parsons**. This is confirmed both by the email handover summary and independently by the document/workbook metadata on the source files (all held at `I:\ADMN\PS\HR Systems\Support\Analysis Team\Grace - Investigations\2025-03 Cority Applicant Data\`):
+**Origin and authorship:** The report was built by **Grace Parsons**, who carried out the substantial majority of the analysis, build, and testing work. This is confirmed both by the email handover summary and independently by the document/workbook metadata on the source files (all held at `I:\ADMN\PS\HR Systems\Support\Analysis Team\Grace - Investigations\2025-03 Cority Applicant Data\`):
 
 | File | Creator (metadata) | Created | Last modified |
 |---|---|---|---|
@@ -26,7 +26,7 @@ This CR retrospectively brings the report **RECSUP20_Applicant Cority Interface 
 
 **[TBC — Grace Parsons' exact handover date is not stated in any source material or the email summary provided. The metadata above shows a build/activity window of March–May 2025 but this is not the same thing as a formal handover date. Confirm with Kevin/Grace if needed.]**
 
-The report was subsequently picked up **informally** by James Salas and "Lee [**CONFIRM WITH KEVIN — surname not known**]", with no formal change record created at that time. This CR is the first formal change-control record for this report.
+The report was subsequently picked up **informally** by James Salas and Lee Strudwick, with no formal change record created at that time. Lee Strudwick has since left the University and is not the focus of this CR. This CR is the first formal change-control record for this report.
 
 This CR formally hands ownership of a full **rebuild** of this report to **Simon Burford**, per the Simon Burford / James Salas email thread (11–18 August 2026).
 
