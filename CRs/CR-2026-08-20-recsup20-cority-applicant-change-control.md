@@ -59,50 +59,48 @@ No risk to Production — the report is DEV-only.
 
 ---
 
-## 8. Testing — Who will test it and how?
+## 8. What is the potential security impact of the change? How will the security impact be tested?
+
+The report exports applicant personal data (name, DOB, address, email, phone) to Cority. This CR does not change existing access or data flows.
+
+Security testing to be defined by Simon Burford as part of the rebuild test plan — confirming only the intended fields are exported and the Cority import target matches expectations.
+
+---
+
+## 9. Testing — Who will test it and how?
 
 Simon Burford will define and run a full test plan in DEV against each defect above, before requesting promotion to QA. James Salas will validate the Cority-side import behaviour.
 
 ---
 
-## 9. Implementation Plan
+## 10. Implementation Plan — Who will implement it and how?
 
-Step 1 — Resolve the unfinished SQL edit and retest. Owner: Simon Burford.
-
-Step 2 — Fix CSV export, quote-mark handling, and DOB format. Owner: Simon Burford.
-
-Step 3 — Confirm expected column count and null-value handling with the business/Cority. Owner: Simon Burford.
-
-Step 4 — Confirm UTF-8 encoding and resolve the open Cority support ticket. Owner: Simon Burford / James Salas.
-
-Step 5 — Retest in DEV before requesting promotion to QA. Owner: Simon Burford.
+1. Resolve the unfinished SQL edit and retest. Owner: Simon Burford.
+2. Fix CSV export, quote-mark handling, and DOB format. Owner: Simon Burford.
+3. Confirm expected column count and null-value handling with the business/Cority. Owner: Simon Burford.
+4. Confirm UTF-8 encoding and resolve the open Cority support ticket. Owner: Simon Burford / James Salas.
+5. Retest in DEV before requesting promotion to QA. Owner: Simon Burford.
 
 ---
 
-## 10. Communications Plan
+## 11. Communications Plan — Who needs to know and how?
 
 James Salas will be informed once the rebuild is complete and ready for Cority-side validation.
 
 ---
 
-## 11. Business Owner / Approver
+## 12. Documentation — Does any documentation need to be updated?
+
+Report documentation (SQL definition, column mapping, and format) will be updated to reflect the rebuild once complete. No impact on the Service Relationship Model or Service Recovery Plan (RTO/RPO).
+
+---
+
+## 13. Service Sponsor / Approver
 
 Marie Cooksey — Head of HR Systems.
 
 ---
 
-## 12. Potential security impact
-
-The report exports applicant personal data (name, DOB, address, email, phone) to Cority. This CR does not change existing access or data flows.
-
----
-
-## 13. How will the security impact be tested?
-
-To be defined by Simon Burford as part of the rebuild test plan.
-
----
-
-## 14. Back Out Plan
+## 14. Back Out Plan — How will it be rolled back in the event of the change failing?
 
 The report is DEV-only with no Production dependency. If rebuild changes cause issues, revert to the last known working SQL block. Owner: Simon Burford.
