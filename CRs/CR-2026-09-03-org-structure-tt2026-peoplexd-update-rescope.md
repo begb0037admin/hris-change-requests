@@ -28,7 +28,9 @@ Department and management-unit actions (code — action — scheduled Entity Nam
 
 Row 10 records HESA code 101 for A7 and row 17 records HESA code 106 for B8. These are source notes only, not hierarchy build actions.
 
-Before creating B8, verify the code is available in the target environment (the saved baseline is the evidence). Before moving or retiring an item, run PERSUP11_Organisation Restructure and clear any active appointments, unassigned posts or open unused vacancies first.
+B8 — ON HOLD. Department code B8 already exists in PeopleXD (currently inactive, description "Human Anatomy & Genetics (AV)"), and the same description also sits under code BQ. Row 16 proposes B8 for a different department ("CNCB — Centre for Neural Circuits and Behaviour"). Row 16 will not be actioned until PACS confirms whether to reactivate and repurpose the existing B8, assign a different code, or resolve the B8/BQ duplication first. Reference: PERSUP11 Active Hierarchy baseline; HOW TO Manage the Org Hierarchy guide (Section 8 covers Pay Administered By / User Field 5).
+
+Before moving or retiring an item (KB, AU, L4), run PERSUP11_Organisation Restructure and clear any active appointments, unassigned posts or open unused vacancies first.
 
 Subsidiary-company actions under Level 2 entity 0D:
 - Delete: V4 Instruct; VD Voltaire Foundation Limited; X3 OUC Investments Limited; X4 Oxford University Clinic LLP; V6 Oxford University (Beijing).
@@ -68,7 +70,7 @@ Method: build in the agreed test environment using the Portal hierarchy-maintena
 7.	Risk Assessment - What are the risks to the services?
 
 == Low.
-- B8 must be confirmed available in the target environment before it is created (the saved PERSUP11 baseline is the evidence).
+- B8 code conflict (row 16). B8 already exists in PeopleXD (inactive, "Human Anatomy & Genetics (AV)"), with the same description also under BQ. Row 16 is on hold until PACS confirms how to proceed (reactivate/repurpose B8, use a different code, or resolve the B8/BQ duplication). No other row depends on B8.
 - Before moving or retiring KB, AU or L4, run PERSUP11_Organisation Restructure and clear any active appointments, unassigned posts or open unused vacancies first.
 - Renamed or re-parented codes may affect downstream report filters; mitigated by the saved pre-change PERSUP11 baseline, the post-change comparison, and the reporting review in Sections 4 and 10.
 - All changes are reversible at configuration-record level provided no posts or appointments have been created against a new or changed unit (see Section 14).
@@ -90,7 +92,7 @@ Method: build in the agreed test environment using the Portal hierarchy-maintena
 == Kevin Lelitte / Asta Palmer will implement via the Portal:
 1. Confirm source values against the Change Schedule.
 2. Verify B8 availability against the saved PERSUP11 baseline.
-3. Apply the department and management-unit actions in the test environment.
+3. Apply the department and management-unit actions in the test environment (excluding row 16 / B8 until the code conflict is resolved — see Section 1).
 4. Apply the subsidiary-company actions in the test environment.
 5. Test, compare PERSUP11 against the saved baseline, and save evidence.
 6. Promote through the approved environments, verifying each stage.
