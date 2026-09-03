@@ -66,7 +66,7 @@ PeopleXD must stay in lockstep with the published PACS Organisational Structure 
 ## 3. Related Changes — Are there dependent changes?
 
 - **CR-2026-06-15** — Colleges & Halls org hierarchy and non-payroll company set-up (UOXU). The 43 Colleges & Societies L2→L3 integration (Option 2, agreed by Anne Mortimer 1 Sep 2026 — integrate L2 codes into management units, L4 renamed "colleges") is tracked there / under project **DTP1092 College Staff into PeopleXD**.
-- **CR 20020472 / 20020477** — Enable 16 COREPORTAL_ADMIN menu options for Portal-based hierarchy maintenance. This is a prerequisite for the Portal work in this CR. **[CONFIRM status — weekly "Update Required" reminders were still being issued to 31 Aug 2026.]**
+- **CR 20020472** — Enable 16 COREPORTAL_ADMIN menu options for Portal-based hierarchy maintenance. This is a prerequisite for the Portal work in this CR. **[CONFIRM status — weekly "Update Required" reminders were still being issued to 31 Aug 2026.]** A related change record, CR 20020477, was seen directly in Kevin's Outlook mailbox (Drew's live COM pull, 3 Sep) as a near-duplicate ITSM entry with its own RecId — it is not in any saved export and its relationship to 20020472 is not independently confirmed here; check both when following up.
 - **FP 68261303** — Multi Company Setup with Access Group.
 - Loading of the 40 REF2029 / Pay Administered By college codes is part of the colleges workstream (see command-centre task t005), not this CR.
 
