@@ -1,10 +1,8 @@
-# Change Request — Trinity Term 2026 Organisational Structure Update in PeopleXD (Rescoped: Change Schedule rows 8–24 and 111–136)
+# Change Request — Trinity Term 2026 Organisational Structure Update in PeopleXD
 
 **Date:** 2026-09-03
 **Drafted by:** Kevin Lelitte
-**Status:** Draft — rescope review required before submission
-
-Companion to CR-2026-09-03-org-structure-tt2026-peoplexd-update. That document remains on file as the fuller record. This rescoped version narrows the change to the organisational-structure actions in the Change Schedule and is the version intended to be taken forward once the rescope review is complete. Where the two differ, the difference is deliberate and is marked below with [CONFIRM WITH KEVIN].
+**Status:** Draft — final scope review required before submission
 
 ---
 
@@ -50,7 +48,7 @@ Subsidiary-company actions, applied under Level 2 entity 0D:
 - Create: X0 Ecosystem Capital Limited; XL Endowment Estates Limited; XM OUPM Ltd; XP Oxuniprint Ltd; XQ Oxford GLAM Enterprises Limited; XR Oxford Research South Africa Limited (External Company Registration); XS Oxford University Development (North America), Inc; XT Oxford University Trading Limited; XU Oxuniprint Limited; XV Medical Sciences Commercial Services Limited; XW Proxemis Limited; XY TOF Corporate Trustee Limited; XZ University of Oxford China Office Limited; Y0 Yayasan Jalin Kemitraan Nusantara; Y1 Oxford University Clinical Research Unit Nepal; Y2 Oxford University (Suzhou) Science & Technology Co. Ltd.
 - Then apply the separate subsequent schedule action that deletes XP as the duplicate company created in error. Preserve this create-then-delete sequence in the implementation evidence.
 
-[CONFIRM WITH KEVIN] The companion CR on file records XP as not created (removed by PACS, reference retained in the change record only), and does not list XP Oxuniprint Ltd alongside XU Oxuniprint Limited. This rescoped version follows the Change Schedule's create-then-delete sequence instead. Confirm which is correct before submission.
+[CONFIRM] The Change Schedule creates XP and then deletes it as a duplicate company created in error. Confirm this create-then-delete sequence is the intended handling rather than omitting XP entirely, and confirm whether both XP Oxuniprint Ltd and XU Oxuniprint Limited are required.
 
 Method: build in the agreed test environment using the Portal hierarchy-maintenance procedure.
 
@@ -64,7 +62,7 @@ PeopleXD's organisational hierarchy must match the published PACS Organisational
 
 ## 3. Related Changes — Are there dependent changes?
 
-[CONFIRM WITH KEVIN] This rescoped CR does not assert any dependencies. The companion CR on file references the Colleges & Halls workstream (CR-2026-06-15 / project DTP1092) as separate, and a Portal-enablement change (CR 20020472, COREPORTAL_ADMIN menu options) as a prerequisite for Portal-based hierarchy maintenance. Confirm whether either should be carried into this version before submission.
+[CONFIRM] Whether this change should record a dependency on the Colleges & Halls organisational-hierarchy workstream (CR-2026-06-15 / project DTP1092), and on the Portal-enablement change (CR 20020472, COREPORTAL_ADMIN menu options) that is required for Portal-based hierarchy maintenance. Both are treated as out of scope of this change unless confirmed otherwise.
 
 ---
 
@@ -93,7 +91,7 @@ PeopleXD will retain stale names, parents and subsidiary-company records, and th
 - B8 code collision. B8 must be confirmed available in the target environment before it is created; the saved PERSUP11 baseline is the evidence for this pre-change check.
 - Moves and retirements with live records attached. Before moving or retiring an item (KB, AU, L4), run PERSUP11_Organisation Restructure and resolve any active appointments, unassigned posts or open unused vacancies first.
 - Renamed or re-parented codes break downstream filters. Mitigated by the saved pre-change PERSUP11 baseline, the post-change PERSUP11 comparison, and the affected-reporting review in Section 4 and Section 10.
-- XP create-then-delete sequence. The duplicate-in-error must be preserved as a recorded sequence in the implementation evidence, not silently omitted — see the Section 1 [CONFIRM WITH KEVIN].
+- XP create-then-delete sequence. The duplicate created in error must be preserved as a recorded sequence in the implementation evidence, not silently omitted (see Section 1).
 - All changes are reversible at configuration-record level provided no posts or appointments have been created against a new or changed unit (see Section 14).
 
 ---
@@ -143,13 +141,13 @@ Marie Cooksey — Head of HR Systems.
 
 ## 12. Potential security impact
 
-None. This CR changes organisational-hierarchy and subsidiary-company records only. No change to salary, payroll or personal-data access; existing HR access and Pay Group security continue to control record and salary visibility. No credentials or payroll-sensitive data are migrated.
+None. This change updates organisational-hierarchy and subsidiary-company records only. No change to salary, payroll or personal-data access; existing HR access and Pay Group security continue to control record and salary visibility. No credentials or payroll-sensitive data are migrated.
 
 ---
 
 ## 13. How will the security impact be tested?
 
-Confirm that hierarchy administration remains restricted to authorised (COREPORTAL_ADMIN) users and that no salary or payroll data is exposed through the renamed or newly created units. [CONFIRM WITH KEVIN] The source draft did not specify a security test; confirm this line is sufficient.
+Confirm that hierarchy administration remains restricted to authorised (COREPORTAL_ADMIN) users and that no salary or payroll data is exposed through the renamed or newly created units. [CONFIRM] that this security test is sufficient.
 
 ---
 
