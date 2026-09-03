@@ -5,7 +5,7 @@ Change Request — Trinity Term 2026 Organisational Structure Update in PeopleXD
 
 == This change request covers only the organisational-structure actions in Organisational Structure (Trinity Term 2026 FINAL PUBLISHED).xlsx, Change Schedule rows 8–24 and 111–136. The Change Schedule is authoritative.
 
-Scope: 17 department and management-unit schedule rows (rows 10 and 17 are HESA-code notes, not hierarchy build actions), and 26 subsidiary-company schedule rows.
+Scope: 17 department and management-unit schedule rows (rows 10 and 17 are HESA-code notes, not hierarchy build actions), and 26 subsidiary-company schedule rows (24 net actions — schedule rows 123 and 124 create and then delete the same code, XP, and cancel out; see below).
 
 The PERSUP11 Active Hierarchy report has been saved as the pre-change baseline at 03 Change Register and Working Tool\Evidence\Pre-change\PERSUP11 Active Hierarchy 03SEP2026.xlsx. It records the before-state; it does not replace the appointment/post check required before a move or retirement.
 
@@ -33,10 +33,9 @@ Before creating B8, verify the code is available in the target environment (the 
 Subsidiary-company actions under Level 2 entity 0D:
 - Delete: V4 Instruct; VD Voltaire Foundation Limited; X3 OUC Investments Limited; X4 Oxford University Clinic LLP; V6 Oxford University (Beijing).
 - Rename: V7 to Health Research Operations Kenya Limited; V5 to Oxford Advanced Research Centres Limited; X2 to Oxford Research South Africa Limited; VU to Oxford University Endowment Management Limited.
-- Create: X0 Ecosystem Capital Limited; XL Endowment Estates Limited; XM OUPM Ltd; XP Oxuniprint Ltd; XQ Oxford GLAM Enterprises Limited; XR Oxford Research South Africa Limited (External Company Registration); XS Oxford University Development (North America), Inc; XT Oxford University Trading Limited; XU Oxuniprint Limited; XV Medical Sciences Commercial Services Limited; XW Proxemis Limited; XY TOF Corporate Trustee Limited; XZ University of Oxford China Office Limited; Y0 Yayasan Jalin Kemitraan Nusantara; Y1 Oxford University Clinical Research Unit Nepal; Y2 Oxford University (Suzhou) Science & Technology Co. Ltd.
-- Then apply the subsequent schedule action that deletes XP as the duplicate company created in error. Keep this create-then-delete sequence in the implementation evidence.
+- Create: X0 Ecosystem Capital Limited; XL Endowment Estates Limited; XM OUPM Ltd; XQ Oxford GLAM Enterprises Limited; XR Oxford Research South Africa Limited (External Company Registration); XS Oxford University Development (North America), Inc; XT Oxford University Trading Limited; XU Oxuniprint Limited; XV Medical Sciences Commercial Services Limited; XW Proxemis Limited; XY TOF Corporate Trustee Limited; XZ University of Oxford China Office Limited; Y0 Yayasan Jalin Kemitraan Nusantara; Y1 Oxford University Clinical Research Unit Nepal; Y2 Oxford University (Suzhou) Science & Technology Co. Ltd.
 
-TO VERIFY BEFORE BUILD: confirm against the current Change Schedule that XP is created then deleted as a duplicate (rather than omitted), and whether both XP Oxuniprint Ltd and XU Oxuniprint Limited are required. Resolve with PACS before applying the subsidiary-company actions.
+XP is not built. The Change Schedule adds an Oxuniprint company twice — XP "Oxuniprint Ltd" (row 123) and XU "Oxuniprint Limited" (row 129) — and then corrects the error by deleting XP (row 124, "Delete second Subsidiary company for OxUniprint made in error"). Rows 123 and 124 cancel out, so no XP company is created; XU "Oxuniprint Limited" is the Oxuniprint entity that exists. These two rows are noted only so a row-by-row reconciliation shows why XP is absent.
 
 Method: build in the agreed test environment using the Portal hierarchy-maintenance procedure.
 
@@ -80,7 +79,7 @@ Method: build in the agreed test environment using the Portal hierarchy-maintena
 == Kevin Lelitte and Asta Palmer will, in the test environment:
 - Verify every in-scope value against Change Schedule rows 8–24 and 111–136.
 - Verify A7 under 2B18, B8 under 2B27, 8H40, KB under 8H40, AU under 4D14, retirement of L4, and E7's Entity Full Name.
-- Verify each subsidiary-company action, including the XP sequence.
+- Verify each subsidiary-company action; confirm no XP company exists and XU "Oxuniprint Limited" is present.
 - Run the standard functional hierarchy checks.
 - Re-run PERSUP11 Active Hierarchy and compare with the saved pre-change baseline.
 - Save the post-change export alongside the baseline, with implementation and test evidence, in the documented cycle location before promotion.
@@ -122,6 +121,6 @@ Method: build in the agreed test environment using the Portal hierarchy-maintena
 
 == Provided no posts or appointments have been created against a changed unit:
 1. Restore each department or management-unit name and parent from the saved PERSUP11 baseline; reinstate L4; remove A7, B8 and 8H40.
-2. Reverse the subsidiary-company actions to their baseline values, keeping the recorded XP sequence.
+2. Reverse the subsidiary-company actions to their baseline values.
 3. Re-run PERSUP11 and compare with the saved pre-change report.
 If posts or appointments have been created against a changed unit, reassign or close them before reversing the hierarchy change.
